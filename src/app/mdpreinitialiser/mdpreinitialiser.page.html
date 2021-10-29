@@ -1,0 +1,28 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>Changer votre mot de passe</ion-title>
+    <ion-buttons slot="start">
+      <ion-button color="primary" routerLink="/home">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="main">
+  <div id="header">
+    <img src="assets/changer.png" />
+  </div>
+  <form id="form">
+  <ion-item>
+    <ion-input placeholder="Ancien mot de passe"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input placeholder="Nouveau mot de passe"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input placeholder="Confirmer nouveau mot de passe"></ion-input>
+  </ion-item>
+    <ion-button expand="block" shape="round">Valider</ion-button>
+  </form>
+</ion-content>

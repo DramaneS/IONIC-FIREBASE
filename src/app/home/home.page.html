@@ -1,0 +1,50 @@
+<ion-content class="main">
+  <ion-app>
+    <ion-menu side="start" content-id="main-content">
+      <ion-header>
+        <ion-toolbar translucent>
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-item>
+            <ion-icon name="search-outline" slot="start"></ion-icon>
+            <p [routerLink]="['/recherche']">Recherche</p>
+          </ion-item><ion-item>
+            <ion-icon name="people" slot="start"></ion-icon>
+            <p [routerLink]="['/utilisateur']">Utilisateur</p>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="aperture-outline" slot="start"></ion-icon>
+            <p [routerLink]="['/mdpreinitialiser']">Changer mot de passe</p>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="log-out-outline" slot="start"></ion-icon>
+            <p (click)="signOut()">Deconnexion</p>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+  
+    <div class="ion-page" id="main-content">
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+          <ion-title>{{ userDetail }}</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <div id="header">
+          <h1>Bienvenue</h1>
+          <img src="assets/profil.png" />
+        </div>
+
+        <h2 class="user">{{user?.userName}}</h2>
+        <p class="user">{{user?.phone}}<p>
+</ion-content>
+</div>
+</ion-app>
+</ion-content>

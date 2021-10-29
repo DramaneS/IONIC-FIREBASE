@@ -1,0 +1,19 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>Utilisateur</ion-title>
+    <ion-buttons slot="start">
+      <ion-button color="primary" routerLink="/home">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="main">
+  <ion-item *ngFor="let item of items | async">
+    <ion-label >{{item.userName}}</ion-label>
+    <ion-label >{{item.phone}}</ion-label>
+    <ion-label >{{item.userEmail}}</ion-label>
+  </ion-item>
+
+</ion-content>
